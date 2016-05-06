@@ -7,7 +7,7 @@ class Post(models.Model):
 	title = models.CharField(max_length=200) #testo con numero limitato di lettere
 	text = models.TextField() # testo senza limite
 	created_date = models.DateTimeField(default=timezone.now)
-	published_date = models.DateTimeField(blank=True, null=True) # non obbligatorio, può avere un valore nullo 
+	published_date = models.DateTimeField(blank=True, null=True) # non obbligatorio, puo avere un valore nullo 
 
 	def publish(self):
 		self.published_date = timezone.now()
